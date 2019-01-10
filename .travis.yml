@@ -1,4 +1,12 @@
 language: node_js
 node_js: node
-services:
-  - mongodb
+cache:
+  directories:
+    - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: NawzH5awipuoJYdEqJQlsaRIXuqSYLMbZQTFlMNSi5w9pITNuicZqSzSy12GYu3YuOgkpNDeCJU+Fkt/kLEgWsUE6obWAEe1nnzLc2MfBC9r7IaYAGDNCHHh+m/Eh7zlA6f8z7znKIaBrqH7Yw/3qKchuR4VgiRkucq4VQP04oCzrq6XQGReiy9EB7TflQCK3T73MXHUUA6DJlNoKwGgR9FQpwWmKNt83Raq75+G5YxY8qMLY09Vjh2hJ5LLsDN8BW/UU+zrZ2rAUA/8p0nI+TsH3jcEC9D9fb3ArsZJ/9maUVyiQmKcLZt4a/fcNUPRqdTwDy8MuUZn0xh7+McNC6VifFplwqjau5PPdLHz0wpehgvyy+hn/8UL7rJ3jt8DF8IKXQx7WFgJz9RdHoe7rcCRzgV8jhq3R8H8gPSE6BfMUlC5rdF59nGxosSddnRi53ljTHailcJ25fkeOE74auQZYUQs88LXnhN5cVf9ySj5aNI5+I/oQQoAsoSmKVdvTZdAEgtgjSx06p5/JR1/1lT5T45SGpbuL3fkCuwq17ZLHUVbh8hHPe8clZcwSXBrUQ5M13dJPL4KF4hI2Oxg7qM8gt1wWnl4eTE4lNQ/3gwTWE3fyV/io9wmpokPobiZr51LL89DKtcKvFNUE2PT09qnhTw9pw8RXT6CFr4VN7Q=
+  app: sheltered-spire-59968
+  on:
+    repo: Bjthomas11/Sports-Shore-Client

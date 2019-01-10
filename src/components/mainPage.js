@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./header";
 import ShowAllTeams from "./showAllTeams";
 import AddTeamSelection from "./addTeamSelection";
-import teamNewsArt from "./teamNewsArt";
+import TeamNewsArt from "./teamNewsArt";
 import { API_BASE_URL } from "../config";
 
 export default class MainPage extends Component {
@@ -129,7 +129,7 @@ export default class MainPage extends Component {
             </li>
             {this.state.hide && <>{teams}</>}
           </ul>
-          {this.state.hide && <teamNewsArt />}
+          {this.state.hide && <TeamNewsArt />}
         </div>
       </div>
     );

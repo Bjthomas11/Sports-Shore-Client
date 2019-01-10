@@ -5,6 +5,7 @@ import { refreshAuthToken } from "../actions/auth";
 import LandingPage from "./landingPage";
 import Signup from "./signup";
 import Login from "./login";
+import MainPage from "./mainPage";
 
 export class App extends Component {
   componentDidUpdate(prevProps) {
@@ -42,6 +43,7 @@ export class App extends Component {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/main" component={MainPage} />
       </div>
     );
   }

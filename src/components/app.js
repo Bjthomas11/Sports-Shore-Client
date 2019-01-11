@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import { Route, withRouter } from "react-router-dom";
 import { refreshAuthToken } from "../actions/auth";
 import LandingPage from "./landingPage";
-import Signup from "./signup";
+import RegistrationForm from "./registrationForm";
 import Login from "./login";
-import MainPage from "./mainPage";
+import MainPage from "./main";
 
 export class App extends Component {
   componentDidUpdate(prevProps) {
@@ -41,7 +41,7 @@ export class App extends Component {
     return (
       <div>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/register" component={RegistrationForm} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/main" component={MainPage} />
       </div>

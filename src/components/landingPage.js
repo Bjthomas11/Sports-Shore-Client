@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import LandingNavbar from "./landingNavbar";
 import MiddleTeamExample from "./middleTeamExample";
 import BottomSection from "./bottomSection";

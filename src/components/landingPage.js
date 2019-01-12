@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 
 export function LandingPage(props) {
   if (props.loggedIn) {
-    return <Redirect to="/main" />;
+    return <Redirect to="/register" />;
   }
 
   return (

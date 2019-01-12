@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Field, reduxForm, focus } from "redux-form";
+import { withRouter } from "react-router-dom";
 import { login } from "../actions/auth";
 import Input from "./input";
 import { required, nonEmpty } from "../validators";
@@ -52,7 +53,9 @@ export class Login extends Component {
   }
 }
 
-export default reduxForm({
-  form: "login",
-  onSubmitFail: (errors, dispatch) => dispatch(focus("login", "username"))
-})(Login);
+export default withRouter(
+  reduxForm({
+    form: "login",
+    onSubmitFail: (errors, dispatch) => dispatch(focus("login", "username"))
+  })(Login)
+);

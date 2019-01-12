@@ -10,7 +10,7 @@ export default class NavBar extends Component {
         </Link>
 
         <div id="buttons">
-          <Link to={"/signup"}>
+          <Link to={"/register"}>
             <button id="signupButton" className="loginButton">
               Sign Up
             </button>

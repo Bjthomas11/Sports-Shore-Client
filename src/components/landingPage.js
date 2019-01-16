@@ -2,7 +2,7 @@ import React from "react";
 import LandingNavbar from "./landingNavbar";
 import MiddleTeamExample from "./middleTeamExample";
 import BottomSection from "./bottomSection";
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 export function LandingPage(props) {

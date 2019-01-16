@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import allTeamsData from "./teamList";
+import "./addTeamSelection.css";
 
 export default class AddTeamSelection extends Component {
   constructor(props) {

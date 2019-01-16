@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import allTeamsData from "./teamList";
+import "./teams.css";
 
 export default class ShowAllTeams extends Component {
   render() {

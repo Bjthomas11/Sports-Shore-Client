@@ -15,7 +15,7 @@ export const fetchTeamsDataError = error => ({
 
 export const fetchTeamsData = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  const user = getState().auth.currentUser.username;
+  const user = getState().auth.currentUser;
   console.log(user);
   return fetch(`${API_BASE_URL}/teams/${user}`, {
     method: "GET",

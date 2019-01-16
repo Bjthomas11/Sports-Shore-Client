@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import { Field, reduxForm, focus } from "redux-form";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { login } from "../actions/auth";
 import Input from "./input";
 import { required, nonEmpty } from "../validators";
 import NavBar from "./navBar";
+import "./registrationForm.css";
 
 export class Login extends Component {
-  onSubmit(values) {
-    this.props.dispatch(login(values.username, values.password));
-    return <Redirect to="/main" />;
+  onSubmit() {
+    this.props
+      .dispatch(login(this.state.username, this.state.password))
+      .then(() => this.props.history.push("/main"));
   }
 
   render() {
@@ -25,7 +27,7 @@ export class Login extends Component {
       <div>
         <NavBar />
         <form
-          className="login-form"
+          className="signup"
           onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
         >
           {error}
@@ -45,9 +47,13 @@ export class Login extends Component {
             id="password"
             validate={[required, nonEmpty]}
           />
-          <button disabled={this.props.pristine || this.props.submitting}>
-            Log in
-          </button>
+          <input
+            type="submit"
+            id="submitButtonLogin"
+            className="loginButton"
+            disabled={this.props.pristine || this.props.submitting}
+            value="Login"
+          />
         </form>
       </div>
     );

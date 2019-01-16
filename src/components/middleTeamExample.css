@@ -1,0 +1,56 @@
+#middleDisplay {
+  margin-bottom: 80px;
+}
+
+#middleDescription {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 18px;
+  color: #4a4a4a;
+  padding: 0 20px;
+  line-height: 2em;
+}
+
+.teamExContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.teamEx {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* border-radius: 10px; */
+  /* width: 50%; */
+  /* border: 1px solid #4a4a4a; */
+  margin: 0px 100px;
+  align-items: center;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+#exampleFeed {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 950px) {
+  #exampleFeed {
+    display: block;
+    text-align: center;
+  }
+
+  #middleDescription {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 16px;
+    color: #4a4a4a;
+  }
+
+  .teamEx {
+    width: 50%;
+    margin: 15px auto;
+    padding: 10px;
+  }
+}

@@ -6,6 +6,8 @@ import Input from "./input";
 import { required, nonEmpty, matches, length, isTrimmed } from "../validators";
 import { withRouter } from "react-router-dom";
 import NavBar from "./navBar";
+import "./registrationForm.css";
+
 const passwordLength = length({ min: 10, max: 72 });
 const matchesPassword = matches("password");
 
@@ -23,7 +25,7 @@ export class RegistrationForm extends React.Component {
       <div>
         <NavBar />
         <form
-          className="login-form"
+          className="signup"
           onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
         >
           <label htmlFor="firstName">First name</label>
@@ -51,12 +53,13 @@ export class RegistrationForm extends React.Component {
             name="passwordConfirm"
             validate={[required, nonEmpty, matchesPassword]}
           />
-          <button
+          <input
             type="submit"
+            id="submitButtonLogin"
+            className="loginButton"
             disabled={this.props.pristine || this.props.submitting}
-          >
-            Register
-          </button>
+            value="Register"
+          />
         </form>
       </div>
     );

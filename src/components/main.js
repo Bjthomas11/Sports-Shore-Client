@@ -4,6 +4,7 @@ import ShowAllTeams from "./showAllTeams";
 import AddTeamSelection from "./addTeamSelection";
 import TeamNewsArt from "./teamNewsArt";
 import { API_BASE_URL } from "../config";
+import "./main.css";
 
 export default class MainPage extends Component {
   constructor(props) {

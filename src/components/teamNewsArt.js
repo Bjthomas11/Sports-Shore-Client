@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { API_BASE_URL } from "../config";
 import { fetchTeamsData } from "../actions/teams";
 import { connect } from "react-redux";
+import "./teamNewsArt.css";
 
 export class TeamNewsArt extends Component {
   constructor(props) {

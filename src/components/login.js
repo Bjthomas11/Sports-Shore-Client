@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Field, reduxForm, focus } from "redux-form";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 import { login } from "../actions/auth";
 import Input from "./input";
 import { required, nonEmpty } from "../validators";
@@ -8,7 +8,8 @@ import NavBar from "./navBar";
 
 export class Login extends Component {
   onSubmit(values) {
-    return this.props.dispatch(login(values.username, values.password));
+    this.props.dispatch(login(values.username, values.password));
+    return <Redirect to="/main" />;
   }
 
   render() {

@@ -86,7 +86,7 @@ export default class MainPage extends Component {
   }
 
   componentDidMount() {
-    fetch(`${API_BASE_URL}/teams/` + localStorage.getItem("username"))
+    fetch(`${API_BASE_URL}/teams/` + localStorage.getItem("user"))
       .then(res => {
         if (!res.ok) {
           return Promise.reject(res.statusText);

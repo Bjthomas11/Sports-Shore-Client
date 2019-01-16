@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { API_BASE_URL } from "../config";
+import { fetchTeamsData } from "../actions/teams";
+import { connect } from "react-redux";
 
-export default class TeamNewsArt extends Component {
+export class TeamNewsArt extends Component {
   constructor(props) {
     super(props);
 
@@ -52,7 +54,8 @@ export default class TeamNewsArt extends Component {
   }
 
   componentDidMount() {
-    this.refreshArticles();
+    // this.refreshArticles();
+    this.props.dispatch(fetchTeamsData());
   }
 
   refreshArticles() {
@@ -70,7 +73,7 @@ export default class TeamNewsArt extends Component {
           id: data.teams[0].id
         });
         let teams = data.teams[0].team.toString();
-        console.log(data.teams[0].team.length);
+        // console.log(data.teams[0].team.length);
         let teamsForNewsString = teams.replace(/,/g, '" OR "');
         console.log(teamsForNewsString);
         this.getNews(teamsForNewsString);
@@ -80,9 +83,9 @@ export default class TeamNewsArt extends Component {
       });
   }
 
-  refreshPage() {
-    window.location.reload();
-  }
+  // refreshPage() {
+  //   window.location.reload();
+  // }
 
   render() {
     const { articles } = this.state;
@@ -112,3 +115,11 @@ export default class TeamNewsArt extends Component {
     return <div className="articles">{articleFeed}</div>;
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    teams: state.teams.teams
+  };
+};
+
+export default connect(mapStateToProps)(TeamNewsArt);

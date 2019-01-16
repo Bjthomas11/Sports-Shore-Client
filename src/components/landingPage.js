@@ -6,9 +6,9 @@ import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 export function LandingPage(props) {
-  if (props.loggedIn) {
-    return <Redirect to="/register" />;
-  }
+  // if (props.loggedIn) {
+  //   return <Redirect to="/login" />;
+  // }
 
   return (
     <div>

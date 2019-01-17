@@ -1,17 +1,23 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "./navBar.css";
+import { Link } from "react-router-dom";
 
-export default class NavBar extends Component {
+export default class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div id="topInfo">
-        <Link to={"/"}>
-          <div className="frontPageName">Sports Shore</div>
-        </Link>
+        <div id="logo">
+          <Link to={"/"}>
+            <div className="frontPageName">Sports Shore</div>
+          </Link>
+        </div>
 
         <div id="buttons">
-          <Link to={"/register"}>
+          <Link to={"/registration"}>
             <button id="signupButton" className="loginButton">
               Sign Up
             </button>

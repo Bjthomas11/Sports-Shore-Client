@@ -1,4 +1,4 @@
-let allTeamsData = {
+let teamData = {
   NBA: [
     {
       team: "Atlanta Hawks",
@@ -364,4 +364,4 @@ let allTeamsData = {
   ]
 };
 
-module.exports = allTeamsData;
+module.exports = teamData;

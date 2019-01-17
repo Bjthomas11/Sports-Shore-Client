@@ -1,60 +1,47 @@
-import React, { Component } from "react";
-import teamList from "./teamList";
+import React from "react";
+import teamData from "./teamList";
 import "./middleTeamExample.css";
 
-export default class MiddleTeamExample extends Component {
+export default class MiddleTeamExample extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    console.log(teamList);
+    console.log(teamData);
 
     return (
       <div id="middleDisplay">
         <h2 id="middleDescription">
-          Select your favorite teams and the current news from the most popular
-          sports outlets will appear
+          Once you've selected your teams, a feed of aggregated news from the
+          leading sports outlets will appear.
         </h2>
+
         <div id="exampleFeed">
-          <div id="exampleteamList" className="teamExContainer">
-            <li className="teamEx grid-item">
-              <img
-                src={teamList.NBA[1].logo}
-                className="teamIconList"
-                alt="team logos"
-              />
+          <div id="exampleTeamList">
+            <li className="teamEx">
+              Lakers
+              <img src={teamData.NBA[13].logo} className="teamIconList" />
             </li>
-            <li className="teamEx grid-item">
-              <img
-                src={teamList.MLB[16].logo}
-                className="teamIconList"
-                alt="team logos"
-              />
+
+            <li className="teamEx">
+              Dodgers
+              <img src={teamData.MLB[14].logo} className="teamIconList" />
             </li>
-            <li className="teamEx grid-item">
-              <img
-                src={teamList.NFL[17].logo}
-                className="teamIconList"
-                alt="team logos"
-              />
+
+            <li className="teamEx">
+              Mets
+              <img src={teamData.MLB[2].logo} className="teamIconList" />
             </li>
-            <li className="teamEx grid-item">
-              <img
-                src={teamList.NBA[9].logo}
-                className="teamIconList"
-                alt="team logos"
-              />
+
+            <li className="teamEx">
+              Rams
+              <img src={teamData.NFL[24].logo} className="teamIconList" />
             </li>
-            <li className="teamEx grid-item">
-              <img
-                src={teamList.MLB[4].logo}
-                className="teamIconList"
-                alt="team logos"
-              />
-            </li>
-            <li className="teamEx grid-item">
-              <img
-                src={teamList.NFL[24].logo}
-                className="teamIconList"
-                alt="team logos"
-              />
+
+            <li className="teamEx">
+              Knicks
+              <img src={teamData.NBA[19].logo} className="teamIconList" />
             </li>
           </div>
         </div>

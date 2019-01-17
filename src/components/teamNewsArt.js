@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { API_BASE_URL } from "../config";
-import { fetchTeamsData } from "../actions/teams";
-import { connect } from "react-redux";
 import "./teamNewsArt.css";
+import { API_BASE_URL } from "../config";
 
-export class TeamNewsArt extends Component {
+export default class TeamNewsArt extends Component {
   constructor(props) {
     super(props);
 
@@ -18,9 +16,9 @@ export class TeamNewsArt extends Component {
     let x = 5;
     fromDate.setDate(fromDate.getDate() - x);
 
-    var dd = fromDate.getDate();
-    var mm = fromDate.getMonth() + 1;
-    var yyyy = fromDate.getFullYear();
+    const dd = fromDate.getDate();
+    const mm = fromDate.getMonth() + 1;
+    const yyyy = fromDate.getFullYear();
     if (dd < 10) {
       dd = "0" + dd;
     }
@@ -32,16 +30,15 @@ export class TeamNewsArt extends Component {
     fromDate = yyyy + "-" + mm + "-" + dd;
 
     console.log(fromDate);
-    var url =
-      "https://newsapi.org/v2/everything?" +
-      `q="${teamsForNewsString}"&` +
-      `from=${fromDate}&` +
-      "language=en&" +
-      "sortBy=relevancy&" +
-      "pageSize=100&" +
-      "apiKey=2940d6c6f0f247ad867985e3d25866b0";
+    const url = `https://newsapi.org/v2/everything? +
+      q=${teamsForNewsString}& +
+      from=${fromDate}& +
+      language=en& +
+      sortBy=relevancy& +
+      pageSize=20& +
+      apiKey=8bf717d96ec647cbb9675ed7f3fc8f05`;
 
-    var req = new Request(url);
+    const req = new Request(url);
 
     fetch(req)
       .then(function(res) {
@@ -55,8 +52,7 @@ export class TeamNewsArt extends Component {
   }
 
   componentDidMount() {
-    // this.refreshArticles();
-    this.props.dispatch(fetchTeamsData());
+    this.refreshArticles();
   }
 
   refreshArticles() {
@@ -74,7 +70,7 @@ export class TeamNewsArt extends Component {
           id: data.teams[0].id
         });
         let teams = data.teams[0].team.toString();
-        // console.log(data.teams[0].team.length);
+        console.log(data.teams[0].team.length);
         let teamsForNewsString = teams.replace(/,/g, '" OR "');
         console.log(teamsForNewsString);
         this.getNews(teamsForNewsString);
@@ -84,9 +80,9 @@ export class TeamNewsArt extends Component {
       });
   }
 
-  // refreshPage() {
-  //   window.location.reload();
-  // }
+  refreshPage() {
+    window.location.reload();
+  }
 
   render() {
     const { articles } = this.state;
@@ -94,19 +90,10 @@ export class TeamNewsArt extends Component {
       return (
         <div className="article" key={index}>
           <div className="content">
-            <a
-              href={article.url}
-              id="articleLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={article.url} id="articleLink" target="_blank">
               <p className="source">{article.source.name}</p>
               <p className="articleTitle">{article.title}</p>
-              <img
-                src={article.urlToImage}
-                className="articleImg"
-                alt="articleImg"
-              />
+              <img src={article.urlToImage} className="articleImg" />
             </a>
           </div>
         </div>
@@ -116,11 +103,3 @@ export class TeamNewsArt extends Component {
     return <div className="articles">{articleFeed}</div>;
   }
 }
-
-const mapStateToProps = state => {
-  return {
-    teams: state.teams.teams
-  };
-};
-
-export default connect(mapStateToProps)(TeamNewsArt);

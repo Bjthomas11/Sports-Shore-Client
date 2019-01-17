@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./header";
 import ShowAllTeams from "./showAllTeams";
 import AddTeamSelection from "./addTeamSelection";
 import TeamNewsArt from "./teamNewsArt";
-import { API_BASE_URL } from "../config";
 import "./main.css";
+import { API_BASE_URL } from "../config";
 
-export default class MainPage extends Component {
+export default class Main extends React.Component {
   constructor(props) {
     super(props);
 
@@ -87,7 +87,7 @@ export default class MainPage extends Component {
   }
 
   componentDidMount() {
-    fetch(`${API_BASE_URL}/teams/` + localStorage.getItem("user"))
+    fetch(`${API_BASE_URL}/teams/` + localStorage.getItem("username"))
       .then(res => {
         if (!res.ok) {
           return Promise.reject(res.statusText);

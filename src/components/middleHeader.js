@@ -1,18 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./middleHeader.css";
 
-export default class MiddleHeader extends Component {
+export default class MiddleHeader extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div id="middleInfo">
+        <div />
         <div id="middleContent">
-          <p id="description">
-            Want to know the latest news about your favorite sports teams? Here
-            at Sports Shore we bring that idea to life!
+          <p id="descrition">
+            A one-stop source of aggregated news articles based on only the
+            favorite teams that you've selected.
           </p>
-          <Link to={"/register"}>
-            <button id="getStarted">Let's Go!</button>
+          <Link to={"/registration"}>
+            <button id="getStarted">Choose your teams</button>
           </Link>
         </div>
       </div>

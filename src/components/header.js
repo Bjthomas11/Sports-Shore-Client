@@ -9,6 +9,9 @@ export class Header extends Component {
     this.props.dispatch(clearAuth());
     clearAuthToken();
   }
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     this.handleClick = () => {
@@ -18,7 +21,9 @@ export class Header extends Component {
 
     return (
       <div id="header">
-        <div id="mainLogoName">Sports Shore</div>
+        <div id="logoHeader">
+          <div id="mainLogoName">Sports Shore</div>
+        </div>
 
         <Link to={"/main"}>
           <button id="logoutButton" onClick={this.handleClick}>

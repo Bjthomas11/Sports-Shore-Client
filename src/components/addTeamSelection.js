@@ -1,8 +1,8 @@
-import React from "react";
-import allTeamsData from "./teamList";
+import React, { Component } from "react";
 import "./addTeamSelection.css";
+import teamData from "./teamList";
 
-export default class AddTeam extends React.Component {
+export default class AddTeamSelection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,8 +14,8 @@ export default class AddTeam extends React.Component {
 
   onSubmit(event) {
     event.preventDefault();
-    const checked = document.querySelectorAll(".input:checked");
-    const selectedTeams = Array.from(checked).map(function(team) {
+    var checked = document.querySelectorAll(".input:checked");
+    var selectedTeams = Array.from(checked).map(function(team) {
       return team.value;
     });
     this.props.onUpdate(selectedTeams);
@@ -32,8 +32,8 @@ export default class AddTeam extends React.Component {
   }
 
   handleCheck() {
-    const checked = document.querySelectorAll(".input:checked");
-    const selectedTeams = Array.from(checked).map(function(team) {
+    var checked = document.querySelectorAll(".input:checked");
+    var selectedTeams = Array.from(checked).map(function(team) {
       return team.value;
     });
 
@@ -43,19 +43,22 @@ export default class AddTeam extends React.Component {
     });
   }
 
+  refreshPage() {
+    window.location.reload();
+  }
+
   render() {
     if (!this.state.editing) {
       return (
         <div className="add-button">
           <h1 id="team">Teams</h1>
-          <button id="addTeam" onClick={() => this.setEditing(true)}>
-            Add Your Favorite Teams
-          </button>
+          <button id="addTeam" onClick={() => this.setEditing(true)} />
         </div>
       );
     }
 
-    let nbaTeams = allTeamsData.NBA.map((team, index) => {
+    let savedTeams = this.props.savedTeams.team;
+    let nbaTeams = teamData.NBA.map((team, index) => {
       return (
         <div className="form-check" key={index}>
           <img src={team.logo} className="teamLogo" alt="NBA team logo" />
@@ -66,6 +69,7 @@ export default class AddTeam extends React.Component {
               value={team.team}
               className="form-check-input input"
               onChange={this.handleCheck}
+              defaultChecked={savedTeams.includes(team.team) ? true : false}
             />
             {team.team}
           </label>
@@ -73,7 +77,7 @@ export default class AddTeam extends React.Component {
       );
     });
 
-    let mlbTeams = allTeamsData.MLB.map((team, index) => {
+    let mlbTeams = teamData.MLB.map((team, index) => {
       return (
         <div className="form-check" key={index}>
           <img src={team.logo} className="teamLogo" alt="MLB team logo" />
@@ -83,6 +87,7 @@ export default class AddTeam extends React.Component {
               value={team.team}
               className="form-check-input input"
               onChange={this.handleCheck}
+              defaultChecked={savedTeams.includes(team.team) ? true : false}
             />
             {team.team}
           </label>
@@ -90,7 +95,7 @@ export default class AddTeam extends React.Component {
       );
     });
 
-    let nflTeams = allTeamsData.NFL.map((team, index) => {
+    let nflTeams = teamData.NFL.map((team, index) => {
       return (
         <div className="form-check" key={index}>
           <img src={team.logo} className="teamLogo" alt="NFL team logo" />
@@ -100,6 +105,7 @@ export default class AddTeam extends React.Component {
               value={team.team}
               className="form-check-input input"
               onChange={this.handleCheck}
+              defaultChecked={savedTeams.includes(team.team) ? true : false}
             />
             {team.team}
           </label>

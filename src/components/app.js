@@ -41,7 +41,7 @@ export class App extends Component {
     return (
       <div>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/register" component={RegistrationForm} />
+        <Route exact path="/registration" component={RegistrationForm} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/main" component={MainPage} />
       </div>

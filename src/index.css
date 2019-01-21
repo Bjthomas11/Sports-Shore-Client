@@ -2,24 +2,4 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Prata", serif;
 }
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul {
-  padding: 0;
-  margin-top: 15px;
-  margin-bottom: 0;
-  list-style-type: none;
-}
-
-/* input {
-  display: block;
-} */

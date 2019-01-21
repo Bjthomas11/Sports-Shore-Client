@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import "./addTeamSelection.css";
-import teamData from "./teamList";
+import React from "react";
+import "./add-team.css";
+import teamList from "./teamList";
 
-export default class AddTeamSelection extends Component {
+export default class AddTeam extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -58,7 +58,7 @@ export default class AddTeamSelection extends Component {
     }
 
     let savedTeams = this.props.savedTeams.team;
-    let nbaTeams = teamData.NBA.map((team, index) => {
+    let nbaTeams = teamList.NBA.map((team, index) => {
       return (
         <div className="form-check" key={index}>
           <img src={team.logo} className="teamLogo" alt="NBA team logo" />
@@ -77,7 +77,7 @@ export default class AddTeamSelection extends Component {
       );
     });
 
-    let mlbTeams = teamData.MLB.map((team, index) => {
+    let mlbTeams = teamList.MLB.map((team, index) => {
       return (
         <div className="form-check" key={index}>
           <img src={team.logo} className="teamLogo" alt="MLB team logo" />
@@ -95,7 +95,7 @@ export default class AddTeamSelection extends Component {
       );
     });
 
-    let nflTeams = teamData.NFL.map((team, index) => {
+    let nflTeams = teamList.NFL.map((team, index) => {
       return (
         <div className="form-check" key={index}>
           <img src={team.logo} className="teamLogo" alt="NFL team logo" />
@@ -143,7 +143,7 @@ export default class AddTeamSelection extends Component {
           </div>
 
           <div className="form-group submitButton" onClick={this.refreshPage}>
-            <button className="saveButton">Save</button>
+            <button className="saveButton">Submit</button>
           </div>
         </form>
       </div>

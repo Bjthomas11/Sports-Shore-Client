@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import "./teamNewsArt.css";
+import React from "react";
+import "./articles.css";
 import { API_BASE_URL } from "../config";
 
-export default class TeamNewsArt extends Component {
+export default class Articles extends React.Component {
   constructor(props) {
     super(props);
 
@@ -11,14 +11,14 @@ export default class TeamNewsArt extends Component {
     };
   }
 
-  getNews(teamsForNewsString) {
+  getNews(data) {
     let fromDate = new Date();
     let x = 5;
     fromDate.setDate(fromDate.getDate() - x);
 
-    const dd = fromDate.getDate();
-    const mm = fromDate.getMonth() + 1;
-    const yyyy = fromDate.getFullYear();
+    var dd = fromDate.getDate();
+    var mm = fromDate.getMonth() + 1;
+    var yyyy = fromDate.getFullYear();
     if (dd < 10) {
       dd = "0" + dd;
     }
@@ -30,15 +30,16 @@ export default class TeamNewsArt extends Component {
     fromDate = yyyy + "-" + mm + "-" + dd;
 
     console.log(fromDate);
-    const url = `https://newsapi.org/v2/everything? +
-      q=${teamsForNewsString}& +
-      from=${fromDate}& +
-      language=en& +
-      sortBy=relevancy& +
-      pageSize=20& +
-      apiKey=8bf717d96ec647cbb9675ed7f3fc8f05`;
+    var url =
+      "https://newsapi.org/v2/everything?" +
+      `q="${data}"&` +
+      `from=${fromDate}&` +
+      "language=en&" +
+      "sortBy=relevancy&" +
+      "pageSize=2&" +
+      "apiKey=508b1fda120441e68b78ef8483883676";
 
-    const req = new Request(url);
+    var req = new Request(url);
 
     fetch(req)
       .then(function(res) {
@@ -71,9 +72,9 @@ export default class TeamNewsArt extends Component {
         });
         let teams = data.teams[0].team.toString();
         console.log(data.teams[0].team.length);
-        let teamsForNewsString = teams.replace(/,/g, '" OR "');
-        console.log(teamsForNewsString);
-        this.getNews(teamsForNewsString);
+        let teamsData = teams.replace(/,/g, '" OR "');
+        console.log(teamsData);
+        this.getNews(teamsData);
       })
       .catch(error => {
         console.log(error);
@@ -90,10 +91,19 @@ export default class TeamNewsArt extends Component {
       return (
         <div className="article" key={index}>
           <div className="content">
-            <a href={article.url} id="articleLink" target="_blank">
+            <a
+              href={article.url}
+              id="articleLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p className="source">{article.source.name}</p>
               <p className="articleTitle">{article.title}</p>
-              <img src={article.urlToImage} className="articleImg" />
+              <img
+                src={article.urlToImage}
+                className="articleImg"
+                alt="team article logo"
+              />
             </a>
           </div>
         </div>

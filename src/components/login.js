@@ -1,17 +1,9 @@
-import React, { Component } from "react";
-import { Field, reduxForm, focus } from "redux-form";
-import { withRouter } from "react-router-dom";
-import { login } from "../actions/auth";
-import Input from "./input";
-import { required, nonEmpty } from "../validators";
-import NavBar from "./navBar";
-import "./registrationForm.css";
+import React from "react";
+import TopInfo from "./top-info";
+import "./signup.css";
 import { API_BASE_URL } from "../config";
 
-export default class Login extends Component {
-  // onSubmit(values) {
-  //   return this.props.dispatch(login(values.username, values.password));
-  // }
+export default class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -65,7 +57,7 @@ export default class Login extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <TopInfo />
 
         <div id="signup">
           <form onSubmit={this.handleSubmit}>
@@ -96,13 +88,4 @@ export default class Login extends Component {
       </div>
     );
   }
-}
-
-{
-  /* export default withRouter(
-  reduxForm({
-    form: "login",
-    onSubmitFail: (errors, dispatch) => dispatch(focus("Login", "username"))
-  })(Login)
-); */
 }

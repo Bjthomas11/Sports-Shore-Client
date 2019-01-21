@@ -1,19 +1,15 @@
-import React, { Component } from "react";
-import LandingNavBar from "./landingNavbar";
-import MiddleTeamExample from "./middleTeamExample";
-import BottomSection from "./bottomSection";
+import React from "react";
+import LandingTop from "./landing-top";
+import MiddleContent from "./middle-content";
+import BottomContent from "./bottom-content";
 
-export default class LandingPage extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+export default class Landing extends React.Component {
   render() {
     return (
       <div>
-        <LandingNavBar />
-        <MiddleTeamExample />
-        <BottomSection />
+        <LandingTop />
+        <MiddleContent />
+        <BottomContent />
       </div>
     );
   }

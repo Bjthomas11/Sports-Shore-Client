@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./header";
-import ShowAllTeams from "./showAllTeams";
-import AddTeamSelection from "./addTeamSelection";
-import TeamNewsArt from "./teamNewsArt";
+import Teams from "./teams";
+import AddTeam from "./add-team";
+import Articles from "./articles";
 import "./main.css";
 import { API_BASE_URL } from "../config";
 
@@ -102,7 +102,7 @@ export default class Main extends React.Component {
         let teams = data.teams[0].team.toString();
         let teamsForNewsString = teams.replace(/,/g, '" OR "');
 
-        this.getNews(teamsForNewsString);
+        // this.getNews(teamsForNewsString);
       })
       .catch(error => {
         console.log(error);
@@ -111,7 +111,7 @@ export default class Main extends React.Component {
 
   render() {
     const teams = this.state.teams.map((team, index) => (
-      <ShowAllTeams {...team} key={index} />
+      <Teams {...team} key={index} />
     ));
 
     return (
@@ -120,7 +120,7 @@ export default class Main extends React.Component {
         <div id="mainContent">
           <ul className="lists">
             <li className="addTeams">
-              <AddTeamSelection
+              <AddTeam
                 onAdd={team => this.addTeam(team)}
                 onUpdate={team => this.updateTeam(team)}
                 savedTeams={this.state.teams[0]}
@@ -130,7 +130,7 @@ export default class Main extends React.Component {
             </li>
             {this.state.hide && <>{teams}</>}
           </ul>
-          {this.state.hide && <TeamNewsArt />}
+          {this.state.hide && <Articles />}
         </div>
       </div>
     );

@@ -1,12 +1,8 @@
 import React from "react";
-import "./navBar.css";
+import "./top-info.css";
 import { Link } from "react-router-dom";
 
-export default class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+export default class TopInfo extends React.Component {
   render() {
     return (
       <div id="topInfo">
@@ -17,7 +13,7 @@ export default class NavBar extends React.Component {
         </div>
 
         <div id="buttons">
-          <Link to={"/registration"}>
+          <Link to={"/signup"}>
             <button id="signupButton" className="loginButton">
               Sign Up
             </button>

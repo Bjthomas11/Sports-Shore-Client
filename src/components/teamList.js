@@ -1,4 +1,4 @@
-let teamData = {
+let teamList = {
   NBA: [
     {
       team: "Atlanta Hawks",
@@ -361,7 +361,129 @@ let teamData = {
       team: "Washington Redskins",
       logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/was.png"
     }
+  ],
+  NHL: [
+    {
+      team: "Anaheim Ducks",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/ana.png"
+    },
+    {
+      team: "Arizona Coyotes",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/ari.png"
+    },
+    {
+      team: "Boston Bruins",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/bos.png"
+    },
+    {
+      team: "Buffalo Sabres",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/buf.png"
+    },
+    {
+      team: "Calgary Flames",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/cgy.png"
+    },
+    {
+      team: "Carolina Hurricanes",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/car.png"
+    },
+    {
+      team: "Chicago Blackhawks",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/chi.png"
+    },
+    {
+      team: "Colorado Avalanche",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/col.png"
+    },
+    {
+      team: "Columbus Blue Jackets",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/cbj.png"
+    },
+    {
+      team: "Dallas Stars",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/dal.png"
+    },
+    {
+      team: "Detroit Red Wings",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/det.png"
+    },
+    {
+      team: "Edmonton Oilers",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/edm.png"
+    },
+    {
+      team: "Florida Panthers",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/fla.png"
+    },
+    {
+      team: "Los Angeles Kings",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/la.png"
+    },
+    {
+      team: "Minnesota Wild",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/min.png"
+    },
+    {
+      team: "Montreal Canadiens",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/mon.png"
+    },
+    {
+      team: "Nashville Predators",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/nsh.png"
+    },
+    {
+      team: "New Jersey Devils",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/njd.png"
+    },
+    {
+      team: "New York Islanders",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/nyi.png"
+    },
+    {
+      team: "New York Rangers",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/nyr.png"
+    },
+    {
+      team: "Ottawa Senators",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/ott.png"
+    },
+    {
+      team: "Philadelphia Flyers",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/phi.png"
+    },
+    {
+      team: "San Jose Sharks",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/sj.png"
+    },
+    {
+      team: "St Louis Blues",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/stl.png"
+    },
+    {
+      team: "Tampa Bay Lightning",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/tb.png"
+    },
+    {
+      team: "Toronto Maple Leafs",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/tor.png"
+    },
+    {
+      team: "Vancouver Canucks",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/van.png"
+    },
+    {
+      team: "Vegas Golden Knights",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/vgs.png"
+    },
+    {
+      team: "Washington Capitals",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/was.png"
+    },
+    {
+      team: "Winnipeg Jets",
+      logo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/wpg.png"
+    }
   ]
 };
 
-module.exports = teamData;
+module.exports = teamList;

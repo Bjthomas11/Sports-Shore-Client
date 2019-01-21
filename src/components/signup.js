@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import NavBar from "./navBar";
-import "./registrationForm.css";
+import React from "react";
+import TopInfo from "./top-info";
+import "./signup.css";
 import { API_BASE_URL } from "../config";
 
-export default class RegistrationForm extends Component {
+export default class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -80,7 +80,6 @@ export default class RegistrationForm extends Component {
       .then(data => {
         if (!data.ok) {
           return Promise.reject(data);
-          this.redirectLogin();
         }
       })
       .catch(error => {
@@ -100,7 +99,8 @@ export default class RegistrationForm extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <TopInfo />
+
         <div id="signup">
           <form onSubmit={this.handleSubmit}>
             {this.state.showError && (

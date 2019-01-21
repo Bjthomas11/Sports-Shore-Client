@@ -1,26 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 import "./teams.css";
-import teamData from "./teamList";
+import teamList from "./teamList";
 
-export default class ShowAllTeams extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+export default class Teams extends React.Component {
   render() {
     let teams = this.props.team;
 
     let aggLeagues = [];
 
-    teamData.NBA.map(team => {
+    teamList.NBA.map(team => {
       aggLeagues.push(team);
     });
 
-    teamData.MLB.map(team => {
+    teamList.MLB.map(team => {
       aggLeagues.push(team);
     });
 
-    teamData.NFL.map(team => {
+    teamList.NFL.map(team => {
       aggLeagues.push(team);
     });
 
@@ -35,7 +31,11 @@ export default class ShowAllTeams extends Component {
         <li key={index} className={"teams"}>
           {team}
 
-          <img src={aggLeagues[teamIndex].logo} className="teamIconList" />
+          <img
+            src={aggLeagues[teamIndex].logo}
+            className="teamIconList"
+            alt="team logo"
+          />
         </li>
       );
     });

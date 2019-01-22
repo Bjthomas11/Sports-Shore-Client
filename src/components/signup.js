@@ -60,7 +60,7 @@ export default class Signup extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log("A name was submitted: " + this.state.username);
+    console.log("name: " + this.state.username);
     event.preventDefault();
     fetch(`${API_BASE_URL}/api/users`, {
       method: "POST",
@@ -82,6 +82,7 @@ export default class Signup extends React.Component {
           return Promise.reject(data);
         }
       })
+      .then(this.redirectLogin())
       .catch(error => {
         console.log(error);
         this.setState({

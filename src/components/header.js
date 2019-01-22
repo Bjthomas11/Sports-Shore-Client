@@ -1,7 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { clearAuth } from "../actions/auth";
+import { clearAuthToken } from "../local-storage";
 
-export default class Header extends React.Component {
+export class Header extends Component {
   render() {
     this.handleClick = () => {
       localStorage.clear();
@@ -23,3 +26,9 @@ export default class Header extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(Header);

@@ -22,7 +22,6 @@ export default class Login extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log("A name was submitted: " + this.state.username);
     event.preventDefault();
     fetch(`${API_BASE_URL}/api/auth/login`, {
       method: "POST",
@@ -44,7 +43,7 @@ export default class Login extends React.Component {
         console.log(data);
         localStorage.username = this.state.username;
       })
-      .then(this.redirectMain)
+      .then(this.redirectMain())
       .catch(error => {
         console.log(error);
       });

@@ -134,7 +134,6 @@ export default class Signup extends React.Component {
               className="inputLogin"
               required
             />
-            ``
             <input
               type="password"
               placeholder="Password"

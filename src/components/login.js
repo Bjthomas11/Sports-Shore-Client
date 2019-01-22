@@ -58,7 +58,6 @@ export default class Login extends React.Component {
     return (
       <div>
         <TopInfo />
-
         <div id="signup">
           <form onSubmit={this.handleSubmit}>
             <input

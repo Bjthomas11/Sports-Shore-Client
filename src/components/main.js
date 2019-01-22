@@ -100,9 +100,9 @@ export default class Main extends React.Component {
           id: data.teams[0].id
         });
         let teams = data.teams[0].team.toString();
-        let teamsForNewsString = teams.replace(/,/g, '" && "');
+        let teamsForNewsString = teams.replace(/,/g, '" OR "');
 
-        this.getNews(teamsForNewsString);
+        // this.getNews(teamsForNewsString);
       })
       .catch(error => {
         console.log(error);

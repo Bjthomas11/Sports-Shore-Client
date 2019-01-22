@@ -98,7 +98,7 @@ export default class Signup extends React.Component {
   }
 
   render() {
-    return (``
+    return (
       <div>
         <TopInfo />
 

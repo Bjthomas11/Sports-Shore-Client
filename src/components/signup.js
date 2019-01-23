@@ -59,6 +59,10 @@ export default class Signup extends React.Component {
       });
   }
 
+  redirectLogin() {
+    window.location = "/login";
+  }
+
   handleSubmit(event) {
     console.log("A name was submitted: " + this.state.username);
     event.preventDefault();
@@ -91,10 +95,6 @@ export default class Signup extends React.Component {
         });
       });
     this.addTeam(this.state.username);
-  }
-
-  redirectLogin() {
-    window.location = "/login";
   }
 
   render() {

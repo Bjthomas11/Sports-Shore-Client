@@ -12,19 +12,19 @@ When you logged in, you select your favorite team/s then current news articles f
 
 ### Landing Page
 
-![Landing-Page](src/img/landingPage.png)
+![LandingPage](src/img/landingPage.png)
 
 ### Log-In
 
-![Log-In](src/img/login.png)
+![LogIn](src/img/login.png)
 
 ### SignUp
 
-![Homepage](src/img/signup.png)
+![Signup](src/img/signup.png)
 
 ### Team Dashboard
 
-![Pet Profile View](src/img/dashboard.png)
+![Team Dashboard](src/img/dashboard.png)
 
 ## Tech Stack Used
 

@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sports Shore
 
-## Available Scripts
+### Select your favorite Professional Teams and see current sports news display
+
+When you logged in, you select your favorite team/s then current news articles from the most popular sports media outlets will pop up on the screen.
+
+## Demo
+
+[Live demo (Heroku)](https://hidden-fortress-78993.herokuapp.com/)
+
+## Screenshots
+
+### Landing Page
+
+![Landing-Page](src/img/landingPage.png)
+
+### Log-In
+
+![Log-In](src/img/login.png)
+
+### SignUp
+
+![Homepage](src/img/signup.png)
+
+### Team Dashboard
+
+![Pet Profile View](src/img/dashboard.png)
+
+## Tech Stack Used
+
+- FrontEnd
+  - React (Redux Router etc.)
+  - Redux
+  - HTML
+  - CSS
+  - Javascript
+- BackEnd
+  - Node.js
+  - MongoDB
+  - Express.js
+  - Mongoose
+  - Passport
+  - JWT (Authentication)
+- Testing:
+  - Mocha
+  - Chai
+  - Faker
+  - Enzyme
+- Development/hosting environment
+  - mLab
+  - Heroku
+  - Travis-CI
+  - GitHub
+
+## Local Usage
 
 In the project directory, you can run:
 
-### `npm start`
+npm run dev
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Note: You will need to have setup and installed the node.js back-end in order to run the application successfully. Back-end link: https://github.com/Bjthomas11/Sports-Shore-Api-Server

@@ -64,10 +64,9 @@ export default class AddTeam extends React.Component {
       return (
         <div className="form-check" key={index}>
           <img src={team.logo} className="teamLogo" alt="NBA team logo" />
-          <label className="teamLabel">
+          <label className="container" className="teamLabel">
             <input
               type="checkbox"
-              id="checkboxTeam"
               value={team.team}
               className="form-check-input input"
               onChange={this.handleCheck}
@@ -125,7 +124,7 @@ export default class AddTeam extends React.Component {
           <i className="far fa-times-circle" />
         </button>
 
-        <form onSubmit={e => this.onSubmit(e)}>
+        <form className="form-teams" onSubmit={e => this.onSubmit(e)}>
           <div id="leagues">
             <div id="nba" className="league">
               <h2>NBA</h2>

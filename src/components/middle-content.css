@@ -6,18 +6,18 @@
   margin-top: 100px;
   text-align: center;
   font-size: 18px;
-  color: #4a4a4a;
+  color: #2c2c2c;
 }
 
 .teamExContainer {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, 300px);
   justify-content: center;
   margin-bottom: 70px;
+  list-style: none;
 }
 
 .teamEx {
-  color: #4a4a4a;
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -25,10 +25,11 @@
 }
 
 button#getStarted {
+  color: rgb(9, 134, 206);
   font-size: 20px;
   padding: 30px;
   border: none;
-  width: 50%;
+  width: 30%;
   display: block;
   margin: auto;
   margin-top: 20px;
@@ -37,8 +38,8 @@ button#getStarted {
 
 button#getStarted:hover {
   border-radius: 20px;
-  color: #4a4a4a;
-  border: 3px solid #4a4a4a;
+  color: rgb(9, 134, 206);
+  border: 3px solid #031e47;
 }
 
 @media only screen and (max-width: 950px) {

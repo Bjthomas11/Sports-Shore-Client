@@ -7,7 +7,7 @@ export default class BottomContent extends React.Component {
       <div id="bottomContent">
         <hr className="style-two" />
         <h2 className="landingHeaderText">
-          <span>Outside Resources</span>
+          <span>Some Outside Resources</span>
         </h2>
         <img
           src="https://icon-locator.herokuapp.com/icon?url=http://www.bleacherreport.com&size=70..120..200"

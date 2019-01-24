@@ -5,11 +5,12 @@
 }
 
 .form-check {
-  margin: 20px;
+  margin: 30px;
 }
 
 #cancel {
   background: none;
+  margin-top: 20px;
   border: none;
 }
 
@@ -22,7 +23,8 @@
   margin-right: 20px;
 }
 
-.add-button {
+div.add-button {
+  margin-top: 10px;
   display: flex;
 }
 
@@ -53,7 +55,7 @@
   margin-top: 30px;
 }
 
-form {
+.form-teams {
   width: 100%;
   text-align: center;
 }
@@ -61,6 +63,10 @@ form {
 .form-check {
   display: flex;
   align-content: center;
+}
+
+input.form-check-input.input {
+  font-size: 30px;
 }
 
 label {
@@ -86,7 +92,7 @@ label {
   border-radius: 10px;
 }
 
-/* @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   .teamLogo {
     height: 20px;
     width: 20px;
@@ -97,4 +103,4 @@ label {
   .form-check {
     justify-self: center;
   }
-} */
+}

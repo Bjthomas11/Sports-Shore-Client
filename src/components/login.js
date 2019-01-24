@@ -60,7 +60,7 @@ export default class Login extends React.Component {
         <TopInfo />
 
         <div id="signup">
-          <form onSubmit={this.handleSubmit}>
+          <form className="formContainer" onSubmit={this.handleSubmit}>
             <input
               type="text"
               placeholder="Username"

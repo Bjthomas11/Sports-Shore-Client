@@ -101,9 +101,8 @@ export default class Signup extends React.Component {
     return (
       <div>
         <TopInfo />
-
         <div id="signup">
-          <form onSubmit={this.handleSubmit}>
+          <form className="formContainer" onSubmit={this.handleSubmit}>
             {this.state.showError && (
               <p className="error">{this.state.errorMessage}</p>
             )}

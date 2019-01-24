@@ -1,28 +1,29 @@
-#signup {
-  margin-top: 150px;
-  height: 800px;
-  display: flex;
-  justify-content: center;
+.formContainer {
+  width: 100%;
+  margin-top: 100px;
 }
 
-form {
-  width: 100%;
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .inputLogin {
   width: 30%;
   margin: 10px 0px;
   border-radius: 20px;
-  border: 1px solid #4a4a4a;
+  border: 1px solid #031e47;
   outline: none;
   padding: 10px;
 }
 
 #submitButtonLogin {
-  width: 50%;
+  width: 30%;
   border: none;
   cursor: pointer;
-  color: #4a4a4a;
+  color: rgb(9, 134, 206);
   font-size: 20px;
   outline: none;
 }
@@ -30,16 +31,16 @@ form {
 #submitButtonLogin:hover {
   padding: 11px;
   background: none;
-  border: 3px solid #4a4a4a;
+  border: 3px solid #031e47;
   border-radius: 20px;
 }
 
 .error {
+  text-align: center;
+  margin-bottom: 20px;
   padding: 15px;
   color: red;
   font-size: 20px;
-  margin-left: 5px;
   border: 1px solid red;
   border-radius: 20px;
-  width: 50%;
 }

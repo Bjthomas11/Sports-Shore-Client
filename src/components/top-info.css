@@ -1,0 +1,61 @@
+#topInfo {
+  width: 100%;
+  height: 80px;
+  background-color: #4a4a4a;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#logo {
+  display: flex;
+  margin-right: 50%;
+}
+
+.frontPageName {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  align-self: center;
+  margin-top: 30px;
+}
+
+.loginButton {
+  outline: none;
+  background: none;
+  border: none;
+  padding: 3px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100px;
+}
+
+.loginButton:hover {
+  height: 50px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  #buttons {
+    display: inline-block;
+  }
+
+  .loginButton {
+    font-size: 10px;
+  }
+
+  .frontPageName {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #logo {
+    margin: 0 auto;
+    padding: 0px;
+  }
+}

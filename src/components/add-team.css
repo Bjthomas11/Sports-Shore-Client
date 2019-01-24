@@ -1,0 +1,100 @@
+.teamLogo {
+  height: 30px;
+  width: 30px;
+  margin-right: 0;
+}
+
+.form-check {
+  margin: 20px;
+}
+
+#cancel {
+  background: none;
+  border: none;
+}
+
+#cancel:hover {
+  cursor: pointer;
+}
+
+#team {
+  color: #2c2c2c;
+  margin-right: 20px;
+}
+
+.add-button {
+  display: flex;
+}
+
+#addTeam {
+  outline: none;
+  color: rgb(9, 134, 206);
+  border-radius: 50%;
+  border: none;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+#addTeam:hover {
+  cursor: pointer;
+  background: #2c2c2c;
+}
+
+#leagues {
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+  width: 100%;
+}
+
+.submitButton {
+  text-align: center;
+  margin-top: 30px;
+}
+
+form {
+  width: 100%;
+  text-align: center;
+}
+
+.form-check {
+  display: flex;
+  align-content: center;
+}
+
+label {
+  display: flex;
+  position: relative;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.saveButton {
+  outline: none;
+  width: 50%;
+  color: rgb(9, 134, 206);
+  font-weight: bold;
+  padding: 0;
+  height: 50px;
+  font-size: 20px;
+}
+
+.saveButton:hover {
+  background: #2c2c2c;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* @media only screen and (max-width: 400px) {
+  .teamLogo {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .form-check {
+    justify-self: center;
+  }
+} */

@@ -1,0 +1,45 @@
+#signup {
+  margin-top: 150px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+}
+
+.inputLogin {
+  width: 30%;
+  margin: 10px 0px;
+  border-radius: 20px;
+  border: 1px solid #4a4a4a;
+  outline: none;
+  padding: 10px;
+}
+
+#submitButtonLogin {
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  color: #4a4a4a;
+  font-size: 20px;
+  outline: none;
+}
+
+#submitButtonLogin:hover {
+  padding: 11px;
+  background: none;
+  border: 3px solid #4a4a4a;
+  border-radius: 20px;
+}
+
+.error {
+  padding: 15px;
+  color: red;
+  font-size: 20px;
+  margin-left: 5px;
+  border: 1px solid red;
+  border-radius: 20px;
+  width: 50%;
+}

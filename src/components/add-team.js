@@ -51,8 +51,10 @@ export default class AddTeam extends React.Component {
     if (!this.state.editing) {
       return (
         <div className="add-button">
-          <h1 id="team">Teams</h1>
-          <button id="addTeam" onClick={() => this.setEditing(true)} />
+          <h1 id="team">Favorite Teams</h1>
+          <button id="addTeam" onClick={() => this.setEditing(true)}>
+            <i className="fas fa-plus" />
+          </button>
         </div>
       );
     }
@@ -119,31 +121,32 @@ export default class AddTeam extends React.Component {
           type="button"
           id="cancel"
           onClick={() => this.setEditing(false)}
-        />
+        >
+          <i className="far fa-times-circle" />
+        </button>
 
         <form onSubmit={e => this.onSubmit(e)}>
           <div id="leagues">
             <div id="nba" className="league">
               <h2>NBA</h2>
-              <hr />
               {nbaTeams}
             </div>
+            <hr />
 
             <div id="mlb" className="league">
               <h2>MLB</h2>
-              <hr />
               {mlbTeams}
             </div>
+            <hr />
 
             <div id="nfl" className="league">
               <h2>NFL</h2>
-              <hr />
               {nflTeams}
             </div>
           </div>
 
           <div className="form-group submitButton" onClick={this.refreshPage}>
-            <button className="saveButton">Submit</button>
+            <button className="saveButton">Get News!</button>
           </div>
         </form>
       </div>

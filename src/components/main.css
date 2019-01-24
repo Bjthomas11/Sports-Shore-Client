@@ -1,0 +1,147 @@
+#leagues {
+  width: 100%;
+}
+
+#logoutButton {
+  outline: none;
+  background: none;
+  border: none;
+  padding: 3px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100px;
+  align-self: flex-start;
+}
+
+#logoutButton:hover {
+  height: 50px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lists {
+  display: block;
+  width: 50%;
+}
+
+#mainContent {
+  display: inline-block;
+  width: 100%;
+}
+
+/* #logo {
+  width: 150px;
+  height: 150px;
+}
+
+#logoHeader {
+  display: flex;
+  align-content: center;
+} */
+
+#mainLogoName {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  align-self: flex-start;
+  margin-top: 15px;
+}
+
+.articles {
+  margin-top: 80px;
+  margin-left: 60px;
+}
+
+.teams {
+  color: #000;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  border-radius: 20px;
+  width: 50%;
+  margin-right: 230px;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+#cancel {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  outline: none;
+  font-size: 30px;
+}
+
+#cancel:focus {
+  color: red;
+}
+
+#header {
+  width: auto;
+  height: 80px;
+  background-color: #4a4a4a;
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 50px;
+  margin-left: 140px;
+  padding-bottom: 40px; */
+}
+
+.add-button {
+  margin-left: 140px;
+}
+
+.fa-plus {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .add-button {
+    justify-content: center;
+  }
+
+  .articles {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .teams {
+    margin: auto auto;
+  }
+
+  .add-button {
+    text-align: center;
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  #leagues {
+    display: inline-block;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #mainLogoName {
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #mainContent {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #leagues {
+    font-size: 20px;
+  }
+}

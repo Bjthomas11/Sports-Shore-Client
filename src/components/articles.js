@@ -36,7 +36,7 @@ export default class Articles extends React.Component {
       `from=${fromDate}&` +
       "language=en&" +
       "sortBy=relevancy&" +
-      "pageSize=2&" +
+      "pageSize=50&" +
       "apiKey=508b1fda120441e68b78ef8483883676";
 
     var req = new Request(url);

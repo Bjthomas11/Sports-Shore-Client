@@ -25,11 +25,12 @@
 }
 
 button#getStarted {
+  outline: none;
   color: rgb(9, 134, 206);
   font-size: 20px;
   padding: 30px;
   border: none;
-  width: 30%;
+  width: auto;
   display: block;
   margin: auto;
   margin-top: 20px;
@@ -37,9 +38,9 @@ button#getStarted {
 }
 
 button#getStarted:hover {
-  border-radius: 20px;
+  /* border-radius: 20px; */
   color: rgb(9, 134, 206);
-  border: 3px solid #031e47;
+  border-bottom: 5px solid #031e47;
 }
 
 @media only screen and (max-width: 950px) {

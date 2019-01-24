@@ -31,22 +31,21 @@ div.add-button {
 #addTeam {
   outline: none;
   color: rgb(9, 134, 206);
-  border-radius: 50%;
+  /* border-radius: 50%; */
   border: none;
   padding: 15px;
   margin-bottom: 20px;
+  width: auto;
 }
 
 #addTeam:hover {
   cursor: pointer;
-  background: #2c2c2c;
+  border-bottom: 5px solid #2c2c2c;
 }
 
 #leagues {
   font-size: 25px;
   display: flex;
-  justify-content: space-between;
-  clear: both;
   width: 100%;
 }
 
@@ -55,9 +54,13 @@ div.add-button {
   margin-top: 30px;
 }
 
+.league h2 {
+  text-align: center;
+}
+
 .form-teams {
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .form-check {
@@ -77,19 +80,22 @@ label {
 }
 
 .saveButton {
+  /* background: none; */
+  border: none;
   outline: none;
-  width: 50%;
+  width: auto;
   color: rgb(9, 134, 206);
   font-weight: bold;
   padding: 0;
   height: 50px;
-  font-size: 20px;
+  font-size: 30px;
+  margin: 30px 0;
 }
 
 .saveButton:hover {
-  background: #2c2c2c;
+  border-bottom: 5px solid #2c2c2c;
   cursor: pointer;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 @media only screen and (max-width: 400px) {
@@ -97,10 +103,18 @@ label {
     height: 20px;
     width: 20px;
   }
+
+  .saveButton {
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
   .form-check {
     justify-self: center;
+  }
+
+  .saveButton {
+    font-size: 20px;
   }
 }

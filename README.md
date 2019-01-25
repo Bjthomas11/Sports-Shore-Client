@@ -31,8 +31,8 @@ When you logged in, you select your favorite team/s then current news articles f
 - FrontEnd
   - React (Redux Router etc.)
   - Redux
-  - HTML
-  - CSS
+  - HTML5
+  - CSS3
   - Javascript
 - BackEnd
   - Node.js
@@ -41,6 +41,7 @@ When you logged in, you select your favorite team/s then current news articles f
   - Mongoose
   - Passport
   - JWT (Authentication)
+  - RESTFUL CRUDE Endpoints
 - Testing:
   - Mocha
   - Chai

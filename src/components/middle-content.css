@@ -11,7 +11,7 @@
 
 .teamExContainer {
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 200px);
   justify-content: center;
   margin-bottom: 70px;
   list-style: none;
@@ -52,5 +52,12 @@ button#getStarted:hover {
 
   .teamEx {
     justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #middleDisplay {
+    margin: 10px;
+    margin-top: 0;
   }
 }

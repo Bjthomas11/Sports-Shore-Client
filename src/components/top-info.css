@@ -56,4 +56,10 @@
     margin: 0 auto;
     padding: 0px;
   }
+
+  #topInfo,
+  #frontPageName {
+    /* display: block; */
+    text-align: center;
+  }
 }

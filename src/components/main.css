@@ -1,7 +1,3 @@
-#leagues {
-  width: 100%;
-}
-
 #logoutButton {
   outline: none;
   background: none;
@@ -23,16 +19,10 @@
   cursor: pointer;
 }
 
-.lists {
-  /* display: block; */
-  width: 50%;
-  margin: 0;
-}
-
-#mainContent {
-  display: inline-block;
-  width: 100%;
-}
+/* div#mainContent {
+  display: flex; 
+  justify-content: center;
+} */
 
 /* #logo {
   width: 150px;

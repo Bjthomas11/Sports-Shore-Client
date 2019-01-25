@@ -87,7 +87,7 @@ export default class Signup extends React.Component {
         console.log(error);
         this.setState({
           showError: true,
-          errorMessage: error.message
+          errorMessage: "Username already taken, please try again"
         });
       });
     this.addTeam(this.state.username);
@@ -144,6 +144,7 @@ export default class Signup extends React.Component {
               className="inputLogin"
               required
             />
+
             <input
               type="submit"
               id="submitButtonLogin"
@@ -155,4 +156,10 @@ export default class Signup extends React.Component {
       </div>
     );
   }
+}
+
+{
+  /* <Link to="/login" id="submitButtonLogin" className="loginButton">
+              Let's Do It!
+            </Link> */
 }

@@ -47,6 +47,10 @@ export default class Login extends React.Component {
       .then(this.redirectMain)
       .catch(error => {
         console.log(error);
+        this.setState({
+          showError: true,
+          errorMessage: "Incorrect Username and/or Password, Try Again"
+        });
       });
   }
 
@@ -61,6 +65,9 @@ export default class Login extends React.Component {
 
         <div id="signup">
           <form className="formContainer" onSubmit={this.handleSubmit}>
+            {this.state.showError && (
+              <p className="error">{this.state.errorMessage}</p>
+            )}
             <input
               type="text"
               placeholder="Username"

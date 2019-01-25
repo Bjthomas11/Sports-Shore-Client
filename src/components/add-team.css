@@ -47,6 +47,15 @@ div.add-button {
   font-size: 25px;
   display: flex;
   width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.league {
+  /* display: flex; */
+  /* width: 33%; */
+  /* width: 33%; */
 }
 
 .submitButton {

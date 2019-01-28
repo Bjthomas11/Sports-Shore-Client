@@ -2,6 +2,7 @@ import React from "react";
 import TopInfo from "./top-info";
 import "./signup.css";
 import { API_BASE_URL } from "../config";
+import { Link } from "react-router-dom";
 
 export default class Signup extends React.Component {
   constructor(props) {
@@ -82,7 +83,6 @@ export default class Signup extends React.Component {
           return Promise.reject(data);
         }
       })
-      .then(this.redirectLogin)
       .catch(error => {
         console.log(error);
         this.setState({
@@ -93,9 +93,10 @@ export default class Signup extends React.Component {
     this.addTeam(this.state.username);
   }
 
-  redirectLogin() {
-    window.location = "/login";
-  }
+  // .then(this.redirectLogin)
+  // redirectLogin() {
+  //   window.location = "/login";
+  // }
 
   render() {
     return (
@@ -144,22 +145,17 @@ export default class Signup extends React.Component {
               className="inputLogin"
               required
             />
-
-            <input
-              type="submit"
-              id="submitButtonLogin"
-              className="loginButton"
-              value="Let's Do It"
-            />
+            <Link to={"/login"}>
+              <input
+                type="submit"
+                id="submitButtonLogin"
+                className="loginButton"
+                value="Let's Do It"
+              />
+            </Link>
           </form>
         </div>
       </div>
     );
   }
-}
-
-{
-  /* <Link to="/login" id="submitButtonLogin" className="loginButton">
-              Let's Do It!
-            </Link> */
 }

@@ -81,7 +81,7 @@ export class Signup extends React.Component {
         return res.json();
       })
       .then(data => {
-        // this.addTeam(this.state.username);
+        this.addTeam(this.state.username);
         this.props.history.push("/login");
       })
       .catch(error => {

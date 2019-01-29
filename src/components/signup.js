@@ -2,9 +2,10 @@ import React from "react";
 import TopInfo from "./top-info";
 import "./signup.css";
 import { API_BASE_URL } from "../config";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-export default class Signup extends React.Component {
+export class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -63,6 +64,7 @@ export default class Signup extends React.Component {
   handleSubmit(event) {
     console.log("A name was submitted: " + this.state.username);
     event.preventDefault();
+    console.log(this.state.username);
     fetch(`${API_BASE_URL}/api/users`, {
       method: "POST",
       body: JSON.stringify({
@@ -79,9 +81,8 @@ export default class Signup extends React.Component {
         return res.json();
       })
       .then(data => {
-        if (!data.ok) {
-          return Promise.reject(data);
-        }
+        // this.addTeam(this.state.username);
+        this.props.history.push("/login");
       })
       .catch(error => {
         console.log(error);
@@ -90,13 +91,7 @@ export default class Signup extends React.Component {
           errorMessage: "Username already taken, please try again"
         });
       });
-    this.addTeam(this.state.username);
   }
-
-  // .then(this.redirectLogin)
-  // redirectLogin() {
-  //   window.location = "/login";
-  // }
 
   render() {
     return (
@@ -145,17 +140,28 @@ export default class Signup extends React.Component {
               className="inputLogin"
               required
             />
-            <Link to={"/login"}>
-              <input
-                type="submit"
-                id="submitButtonLogin"
-                className="loginButton"
-                value="Let's Do It"
-              />
-            </Link>
+            <input
+              type="submit"
+              id="submitButtonLogin"
+              className="loginButton"
+              value="Let's Do It"
+            />
           </form>
         </div>
       </div>
     );
   }
+}
+
+export default withRouter(Signup);
+
+{
+  /* <Link to={"/login"}>
+  <input
+    type="submit"
+    id="submitButtonLogin"
+    className="loginButton"
+    value="Let's Do It"
+  />
+</Link>; */
 }

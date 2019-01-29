@@ -80,7 +80,7 @@ export class Signup extends React.Component {
       .then(res => {
         return res.json();
       })
-      .then(data => {
+      .then(() => {
         this.addTeam(this.state.username);
         this.props.history.push("/login");
       })
@@ -93,6 +93,17 @@ export class Signup extends React.Component {
       });
   }
 
+  // try {
+  //   this.addTeam(this.state.username);
+  //   this.props.history.push("/login");
+  // } catch (error) {
+  //   console.log(error);
+  //   this.setState({
+  //     showError: true,
+  //     errorMessage: "Username already taken, please try again"
+  //   });
+  // }
+
   render() {
     return (
       <div>
@@ -100,7 +111,7 @@ export class Signup extends React.Component {
         <div id="signup">
           <form className="formContainer" onSubmit={this.handleSubmit}>
             {this.state.showError && (
-              <p className="error">{this.state.errorMessage}</p>
+              <p className="error"> {this.state.errorMessage}</p>
             )}
             <input
               type="text"

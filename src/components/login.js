@@ -49,7 +49,8 @@ export default class Login extends React.Component {
         console.log(error);
         this.setState({
           showError: true,
-          errorMessage: "Incorrect Username and/or Password, Try Again"
+          errorMessage:
+            "Username may be taken and/or Password is incorrect, Try Again"
         });
       });
   }

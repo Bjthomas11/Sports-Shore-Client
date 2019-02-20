@@ -6,6 +6,10 @@ When you logged in, you select your favorite team/s then current news articles f
 
 ## Demo
 
+Demo Account:
+Username: user1
+Password: testing123
+
 [Live demo (Heroku)](https://hidden-fortress-78993.herokuapp.com/)
 
 ## Screenshots

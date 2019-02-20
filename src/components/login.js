@@ -93,6 +93,13 @@ export default class Login extends React.Component {
             />
           </form>
         </div>
+        <p id="demo">
+          Demo Account:
+          <br />
+          Username: user1
+          <br />
+          Password: testing123
+        </p>
       </div>
     );
   }
